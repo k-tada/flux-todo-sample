@@ -8,12 +8,13 @@
     "clean": "npm run clean:www",
     "copy:html": "cp src/index.html www/",
     "copy": "npm run copy:html",
-    "build": "webpack",
+    "build": "npm run clean && npm run copy && webpack",
     "watch": "npm run clean && npm run copy && webpack --watch & `npm bin`/browser-sync start --config bs-config.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "flux": "^2.1.1",
     "react": "~0.14.7",
     "react-addons-update": "^0.14.8",
     "react-bootstrap": "^0.29.4",

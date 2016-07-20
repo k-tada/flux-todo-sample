@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: __dirname + '/src/js/app.js',
@@ -18,6 +19,7 @@ module.exports = {
     loaders: [
     {
       test: /\.js$/,
+      include: path.resolve(__dirname, './src/js'),
       exclude: /(node_modules|bower_components)/,
       loader: 'babel'
     },

@@ -2,6 +2,7 @@ import React from 'react';
 import CSSModules from 'react-css-modules';
 import style from './AddForm.less';
 import { FormControl } from 'react-bootstrap';
+import TodoActions from '../../actions';
 
 @CSSModules( style )
 export default class AddForm extends React.Component {
@@ -19,7 +20,7 @@ export default class AddForm extends React.Component {
     e.preventDefault();
     const text = this.state.text.trim();
     if ( text ) {
-      this.props.addTodo( text );
+      TodoActions.addTodo( text );
       this.setState({ text: '' });
     }
   }
