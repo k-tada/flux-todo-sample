@@ -26,6 +26,10 @@ module.exports = {
       loader: ExtractTextPlugin.extract('style-loader', [ 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'postcss' ])
     },
     {
+      test: /\.less$/,
+      loader: ExtractTextPlugin.extract('style-loader', [ 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'less-loader' ])
+    },
+    {
       test: /\.png$/,
       loader: 'url-loader?limit=100000'
     }

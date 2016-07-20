@@ -1,7 +1,9 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
-import style from './Main.css';
+import style from './Main.less';
 import { Button } from 'react-bootstrap';
+import Header from './Header';
+import Contents from './Contents/Contents';
 
 @CSSModules( style )
 export default class Main extends React.Component {
@@ -12,7 +14,10 @@ export default class Main extends React.Component {
   render() {
     return (
       <div styleName="main">
-        <Button bsStyle="info">hoge</Button>
+        <div styleName="wrapper">
+          <Header />
+          <Contents />
+        </div>
       </div>
     );
   }
