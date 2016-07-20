@@ -2,8 +2,8 @@ import React from 'react';
 import CSSModules from 'react-css-modules';
 import style from './TodoList.less';
 import { Checkbox } from 'react-bootstrap';
-import TodosStore from '../../stores/todos';
-import TodoActions from '../../actions';
+import TodosStore from 'stores/todos';
+import TodoActions from 'actions';
 
 @CSSModules( style )
 export default class TodoList extends React.Component {

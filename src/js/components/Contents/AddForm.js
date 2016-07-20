@@ -2,7 +2,7 @@ import React from 'react';
 import CSSModules from 'react-css-modules';
 import style from './AddForm.less';
 import { FormControl } from 'react-bootstrap';
-import TodoActions from '../../actions';
+import TodoActions from 'actions';
 
 @CSSModules( style )
 export default class AddForm extends React.Component {

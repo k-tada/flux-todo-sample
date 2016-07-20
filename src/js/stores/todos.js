@@ -1,7 +1,7 @@
 import EventEmitter from 'events';
-import AppDispatcher from '../dispatcher/AppDispatcher';
-import * as actions from '../constants/actions';
-import * as events from '../constants/events';
+import AppDispatcher from 'dispatcher/AppDispatcher';
+import * as actions from 'constants/actions';
+import * as events from 'constants/events';
 
 class TodosStore extends EventEmitter {
   constructor() {

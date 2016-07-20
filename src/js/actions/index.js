@@ -1,5 +1,5 @@
-import AppDispatcher from '../dispatcher/AppDispatcher';
-import * as actions from '../constants/actions';
+import AppDispatcher from 'dispatcher/AppDispatcher';
+import * as actions from 'constants/actions';
 
 class TodoActions {
   addTodo( todo ) {
