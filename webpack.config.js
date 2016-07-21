@@ -8,16 +8,15 @@ module.exports = {
     publicPath: '/www/js',
     filename: 'bundle.js'
   },
-  devServer: {
-    contentBase: './www',
-    port: 9090,
-    inline: true
+  resolve: {
+    extensions: ['', '.js'],
+    root: [ path.resolve(__dirname, './src/js') ],
   },
-  devtool: 'source-map',
   module: {
     loaders: [
     {
       test: /\.js$/,
+      include: path.resolve(__dirname, './src/js'),
       exclude: /(node_modules|bower_components)/,
       loader: 'babel'
     },
